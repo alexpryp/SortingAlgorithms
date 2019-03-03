@@ -1,3 +1,3 @@
-Sorting algorithms
+#Sorting algorithms
 
-1. Bubble sort
+This is a simple implementation of the JavaScript Bubble sorting algorithm.
