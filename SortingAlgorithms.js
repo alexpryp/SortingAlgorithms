@@ -10,24 +10,20 @@
 
     //Bubble sort
     function BubbleSort(array) {
-    	let arr = array.slice(0);
-	    for (let k = arr.length; k > -1; k--) {
-	        let wasSwap = false;
-	        for (let i = 0, j = 1; j < k; i++, j++) {
-	            if (arr[i] > arr[j]) {
-	                let temp = arr[i];
-	                arr[i] = arr[j];
-	                arr[j] = temp;
-	                wasSwap = true;
-	            }
-	        }
-	        if(!wasSwap) break;
-	    }
+        let n = array.length - 1;
 
-	    console.log(arr);
-	    document.write("Bubble sort result: " + '[' + arr + ']' + '<br>');
-	}
+        for (let i = 0; i < n; i++){
+            let m = n - i;
 
-	BubbleSort(array);
+            for (let j = 0; j < m; j++) { 
+                if (array[j+1] < array[j]) {
+                    let t = array[j+1]; array[j+1] = array[j]; array[j] = t; 
+                }
+            }
+        }                     
+        return array;
+    }
+
+    document.write("Bubble sort result: " + "[" + BubbleSort(array)+ "]" + "<br>");
 
 })()
